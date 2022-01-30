@@ -10,6 +10,22 @@ h2 {
     font-size:3rem;
 }
 
+h3 {
+    font: size 1rem;
+}
+
+.green-background{
+    background-color: rgba(49, 185, 56, 0.795);
+}
+
+.red-background{
+    background-color: rgba(185, 49, 49, 0.795);
+}
+
+.yellow-background{
+    background-color: rgba(206, 203, 52, 0.795);
+}
+
 /*HEADER*/
 
 .header,
@@ -154,10 +170,7 @@ aside .toggle-inside li {
 .content-wrapper {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
     align-items: center;
-    align-content: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -177,8 +190,8 @@ aside .toggle-inside li {
 
 .glitch-text::before{
     content:'but you still seeking for';
-    color:lightgray;
-    text-shadow:0px 0px 5px 10px black;
+    color:rgba(211, 211, 211, 0.952);
+    text-shadow:0px 0px 5px 10px rgb(0, 0, 0);
     -webkit-filter: blur(7px);
     -moz-filter: blur(7px);
     -o-filter: blur(7x);
@@ -187,9 +200,7 @@ aside .toggle-inside li {
     display:block;
     position:absolute;
     z-index:-1;
-    font-size:1.5rem;
-    left:0px;
-    right:0px;
+    font-size:3.5rem;
     opacity:.5;
 }
 
@@ -200,23 +211,62 @@ aside .toggle-inside li {
     margin:0 auto;
     text-shadow:0px 0px 3px white;
     animation:glitch-text 3s infinite;
-    font-size:34px;
+    font-size:1.5em;
     color:black;
 }
 
 @keyframes glitch-text{
     3%{text-shadow:7px 7px 0px red;}
-    6%{text-shadow:-9px 4px 0px blue;transform:translate(4px,-10px) skewX(5440deg);}
+    6%{text-shadow:-9px 4px 0px blue;transform:translate(4px,-10px) skewX(40deg);}
     7%{text-shadow:3px -4px 0px green;}
     9%{text-shadow:0px 0px 3px white;transform:translate(0px,0px) skewX(0deg);}
     2% , 54%{transform:translateX(0px) skew(0deg);}
-    55%{transform:translate(-2px,6px) skew(-5530deg);}
+    55%{transform:translate(-2px,6px) skew(-50deg);}
     56%{text-shadow:0px 0px 3px white;transform:translate(0px,0px) skew(0deg);}
     57%{text-shadow:7px 7px 0px red;transform:translate(4px,-10px) skew(-70deg);}
     58%{text-shadow:0px 0px 3px white;transform:translate(0px,0px) skew(0deg);}
     62%{text-shadow:3px -4px 0px green;transform:translate(0px,20px) skew(0deg);}
     63%{text-shadow:0px 0px 3px white;transform:translate(4px,-2px) skew(0deg);}
-    64%{text-shadow:0px 0px 3px black;transform:translate(1px,3px) skew(-130deg);}
+    64%{text-shadow:0px 0px 3px black;transform:translate(1px,3px) skew(-10deg);}
     65%{text-shadow:0px 0px 3px black;transform:translate(-7px,2px) skew(20deg);}
     66%{text-shadow:0px 0px 3px black;transform:translate(0px,0px) skew(0deg);}
+}
+
+/*footer - notifications*/
+.footer-note-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: absolute;
+    bottom:10px;
+    right: 10px;
+}
+
+.footer-note-menu__notification{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    min-height: 80px;
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 3px 1px 1px rgba(0, 38, 151, 0.22);
+    box-shadow: 0 1px 3px 1px rgba(0, 38, 151, 0.22);
+}
+
+.notification__logo{
+    width: 2em;
+    height: 2em;
+    align-self: center;
+    color: #fff;
+}
+
+.notification__description{
+    padding-left: 1vw;
+    flex-grow: 1;
+    color:#fff;
+    max-width: 13em;
 }
