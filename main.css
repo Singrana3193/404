@@ -95,6 +95,7 @@ h3 {
     text-align: center;
     background: chocolate;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .dropdown-menu__header{
